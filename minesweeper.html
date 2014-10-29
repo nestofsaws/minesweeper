@@ -1,0 +1,57 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<title>Mine Sweeper</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="minesweeper.css"/>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="minesweeper.js"></script>		
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 main">
+				<h1>Mine Sweeper</h1>
+				<form id="grid_form">
+					<fieldset>
+						<legend>Set Up the Mine Field:</legend>
+						<p>
+							<label>Number of Rows: 
+							<input type="number" id="rowval" autofocus min="8" max="30" name="number" placeholder="8">
+							</label><br />
+						</p>
+						<p>
+							<label>Number of Columns: 
+							<input type="number" id="colval" min="8" max="40" placeholder="8">
+							</label><br />
+						</p>
+						<p>
+							<label>Number of Mines: 
+							<input type="number" id="mineval" min="1" placeholder="1">
+							</label><br />
+						</p>
+						<p>
+							<input type="button" id="grid_size" value="Build Mine Field" class="btn btn-lg btn-success">
+						</p>
+						<p>
+							<input type="button" id="reset" value="Reset Game" class="btn btn-lg btn-warning">
+						</p>
+					</fieldset>
+				</form>
+				<hr>
+				<div id="mine_counter">
+					<form>
+							Bombs Remaining: <input type="button" id="remaining_mines" class="btn btn-lg btn-danger">
+					</form>
+				</div>
+				<hr>
+				<div id="MINE_FIELD"></div>
+				<hr>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
